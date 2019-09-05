@@ -9,10 +9,16 @@ import gengduo from '../pages/gengduo'
 import zhuce from '../pages/zhuce'
 import login from '../pages/login'
 import tiaozhuan from '../pages/tiaozhuan'
+import shouyexq from '../pages/shouyexq'
 Vue.use(Router)
 
 export default new Router({
   routes: [{
+      path: '/shouyexq',
+      name: 'shouyexq',
+      component: shouyexq
+    },
+    {
       path: '/tiaozhuan',
       name: 'tiaozhuan',
       component: tiaozhuan

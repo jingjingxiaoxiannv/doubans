@@ -6,14 +6,20 @@
 
     <p>{{tit}}</p>
     <p class="xing">
-      ☆☆☆☆☆
+      <el-rate v-model="value" disabled text-color="#ff9900" :score-template="{value}"></el-rate>
       <span>评分</span>
     </p>
   </div>
 </template>
 <script>
 export default {
-  props: ["tit", "imgurl"]
+  data() {
+    return {
+      value: 4.7
+    };
+  },
+  props: ["tit", "imgurl", "pingfen"],
+  methods: {}
 };
 </script>
 <style scoped>

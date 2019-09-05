@@ -1,17 +1,20 @@
 <template>
   <div class="bigbox">
     <div class="conbox">
-      <div class="ubox">
-        <div class="ubl">
-          <img src="../../static/user.png" />
+      <router-link to="/login">
+        <div class="ubox">
+          <div class="ubl">
+            <img src="../../static/user.png" />
+          </div>
+          <div class="ubr">请先登录</div>
         </div>
-        <div class="ubr">请先登录</div>
-      </div>
-
-      <div class="tbox">
-        <img src="../../static/001.png" />
-        <img src="../../static/2222.png" />
-      </div>
+      </router-link>
+      <router-link to="/zhuce">
+        <div class="tbox">
+          <img src="../../static/001.png" />
+          <img src="../../static/2222.png" />
+        </div>
+      </router-link>
     </div>
   </div>
 </template>

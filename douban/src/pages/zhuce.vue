@@ -29,12 +29,10 @@ export default {
       var email = this.umes;
       var pwd = this.uname;
       var uname = this.umima;
-
       var param = new URLSearchParams();
       param.append("email", this.umes);
       param.append("pwd", this.uname);
       param.append("uname", this.umima);
-
       this.axios({
         method: "post",
         url: "http://10.35.162.160:3000/post",

@@ -4,6 +4,7 @@
     <div class="fangNav">
       <fangkuainav v-for="(v,i) in obj" :key="i" :titx="v.tit" :urls="v.url" class="fangkuai"></fangkuainav>
     </div>
+
     <div class="btkbox">
       <img class="gift" src="../../static/dengdai.gif" v-if="arrs.length<=0" />
       <br />
@@ -14,6 +15,7 @@
         :txt1="con[i]"
         :imgurl="v.image"
         :names="v.category_name"
+        :i="v.id"
       ></bitiku>
     </div>
   </div>
@@ -23,6 +25,7 @@
 import indexnav from "../components/indexnav";
 import fangkuainav from "../components/indexzj/fangkuainav";
 import bitiku from "../components/indexzj/bitiku";
+
 export default {
   components: {
     indexnav,
@@ -46,6 +49,7 @@ export default {
       method: "get"
     }).then(ok => {
       this.arrs = ok.data;
+      console.log(this.arrs);
     });
   },
   computed: {

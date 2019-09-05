@@ -7,7 +7,13 @@
         <span>更多</span>
       </li>
       <div class="bigbox">
-        <lunbo v-for="(v,i) in yy" :key="i" :tit="v.title" :imgurl="v.images.large"></lunbo>
+        <lunbo
+          v-for="(v,i) in yy"
+          :key="i"
+          :tit="v.title"
+          :imgurl="v.images.large"
+          :value="v.rating.average/2"
+        ></lunbo>
       </div>
 
       <li>
@@ -39,7 +45,6 @@
       <fenlei v-for="(v,i) in titles" :key="i" :tit1="v.tit1" :tit2="v.tit2"></fenlei>
     </div>
     <foottu></foottu>
-    
   </div>
 </template>
 
@@ -50,15 +55,13 @@ import findmov from "../components/dianying/findmov";
 import fenlei from "../components/dianying/fenlei";
 import foottu from "../components/foottu";
 
-
 export default {
   components: {
     indexnav,
     lunbo,
     findmov,
     fenlei,
-    foottu,
-  
+    foottu
   },
   data() {
     return {
@@ -92,6 +95,7 @@ export default {
     }).then(
       ok => {
         this.arr = ok.data;
+        console.log(this.arr);
       },
       err => {
         console.log("失败");

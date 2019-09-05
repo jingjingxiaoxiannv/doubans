@@ -1,7 +1,6 @@
 <template>
   <div>注册成功{{miao}}秒后跳转至登陆页面</div>
 </template>
-
 <script>
 export default {
   data() {

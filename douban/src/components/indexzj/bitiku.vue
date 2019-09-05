@@ -1,19 +1,23 @@
 <template>
-  <div class="neiro">
+  <router-link :to="{name:'shouyexq',query:{id:i}}" class="neiro">
     <div class="left1">
       <h3>{{tit1}}</h3>
       <p>{{txt1}}</p>
-
       <p class="bt">{{names}}</p>
     </div>
     <div class="right1">
       <img :src="imgurl" />
     </div>
-  </div>
+  </router-link>
 </template>
 <script>
 export default {
-  props: ["tit1", "txt1", "imgurl", "names"]
+  props: ["tit1", "txt1", "imgurl", "names", "i"],
+  methods: {
+    fasong() {
+      console.log(i);
+    }
+  }
 };
 </script>
 <style scoped>
@@ -46,5 +50,8 @@ export default {
   position: absolute;
   left: 0rem;
   bottom: -0.1rem;
+}
+a {
+  color: black;
 }
 </style>
