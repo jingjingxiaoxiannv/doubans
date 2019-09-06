@@ -10,10 +10,16 @@ import zhuce from '../pages/zhuce'
 import login from '../pages/login'
 import tiaozhuan from '../pages/tiaozhuan'
 import shouyexq from '../pages/shouyexq'
+import moviexq from '../pages/moviexq.vue'
 Vue.use(Router)
 
 export default new Router({
   routes: [{
+      path: '/moviexq',
+      name: 'moviexq',
+      component: moviexq
+    },
+    {
       path: '/shouyexq',
       name: 'shouyexq',
       component: shouyexq

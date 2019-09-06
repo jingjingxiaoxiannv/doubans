@@ -67,6 +67,7 @@ export default {
     return {
       arr: [],
       arr2: [],
+      pingfen:0,
       titles: [
         { tit1: "经典" },
         { tit1: "豆瓣高分" },

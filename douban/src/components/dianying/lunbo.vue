@@ -1,27 +1,29 @@
 <template>
-  <div class="tubox">
-    <div class="imgs">
-      <img :src="imgurl" />
+  <router-link :to="{name:'moviexq',query:{id:id}}">
+    <div class="tubox">
+      <div class="imgs">
+        <img :src="imgurl" />
+      </div>
+      <p>{{tit}}</p>
+      <p class="xing">
+        <el-rate v-model="value" disabled text-color="#ff9900" :score-template="value"></el-rate>
+        <span>评分</span>
+      </p>
     </div>
-
-    <p>{{tit}}</p>
-    <p class="xing">
-      <el-rate v-model="value" disabled text-color="#ff9900" :score-template="{value}"></el-rate>
-      <span>评分</span>
-    </p>
-  </div>
+  </router-link>
 </template>
 <script>
 export default {
   data() {
     return {
-      value: 4.7
+      // value: 4.7
     };
   },
-  props: ["tit", "imgurl", "pingfen"],
+  props: ["tit", "imgurl", "value", "id"],
   methods: {}
 };
 </script>
+
 <style scoped>
 .bigBox {
   display: flex;
@@ -51,5 +53,8 @@ p {
 p span {
   font-size: 0.12rem;
   color: #aaaaaa;
+}
+a {
+  color: black;
 }
 </style>
